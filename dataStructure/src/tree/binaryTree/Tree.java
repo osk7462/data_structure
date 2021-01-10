@@ -19,8 +19,7 @@ public class Tree {
         this.root = insertLevelOrder(this.root, data, 0, data.length);
     }
     public Node insertLevelOrder(Node root, int[] data, int i, int n) {
-
-        //baseline case for recursion.
+        
         if (i < n) {
             root = new Node(data[i]);
             root.setLeft(insertLevelOrder(root.getLeft(), data, i*2+1, n));
